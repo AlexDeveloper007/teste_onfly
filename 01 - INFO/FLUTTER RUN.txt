@@ -1,0 +1,11 @@
+Command Line:
+
+flutter run --no-sound-null-safety
+
+VS Code (launch.json):
+
+"args": [ "--no-sound-null-safety" ]
+
+Android Studio, args - Run/Debug Configuration:
+
+--no-sound-null-safety
