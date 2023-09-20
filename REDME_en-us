@@ -1,0 +1,52 @@
+Onfly Mobile Test - Detailed Description
+
+The project was developed using the Flutter framework. On the app's initial screen, users will find a complete list of all their expenses, including information such as description, date/time, and expense amount. When selecting one of the cards from the list, users will be redirected to the editing screen, where they can view and modify the expense details. Additionally, they have the option to save the changes or delete the expense. The initial screen also provides options for logging out, allowing users to log out of the application, and for adding a new expense, which takes them to a screen to enter the details of the new expense.
+
+When an expense is saved, all fields are validated, and if they are correct, along with the latitude and longitude of the device, they are sent in a request to the server. Even if the user is offline, they can still save and edit expenses normally. As soon as the connection is reestablished, all offline-captured expenses will be automatically sent to the server.
+
+Some important notes:
+
+To synchronize expenses captured offline, it is necessary to log out and log in to the application or open the expense registration screen to trigger the request. Due to time constraints, a real-time listener to check for connection availability has not been implemented.
+
+The registration of the time in the expense has not been implemented.
+
+===== Installation Instructions: =====
+
+To install the application, you can run it in the following ways:
+
+Command Line:
+flutter run --no-sound-null-safety
+
+In VS Code, include the arguments in the launch.json file:
+"args": [
+  "--no-sound-null-safety"
+]
+
+In Android Studio, include the argument in Run/Debug Configuration:
+--no-sound-null-safety
+
+===== Summary of Practices Used in the Project: =====
+
+Architectural Pattern:
+I adopted the MVVM pattern in the project, which is a widely recognized architectural pattern in the development of Flutter applications, ensuring organization, scalability, and ease of maintenance.
+
+Code Reuse:
+To maximize code reusability, widgets, classes, functions, and reusable libraries were used, ensuring development quality, scalability, and facilitating future maintenance.
+
+State Management:
+To manage the application's state, the MobX and GetIt libraries were used, simplifying the connection and management of reactive data in the application's interfaces.
+
+HTTP Requests:
+HTTP requests were handled using the DIO library, a powerful package for HTTP network communication in Dart/Flutter, offering support for global settings, interceptors, among others.
+
+Geolocation:
+To access device location services, the Geolocator library was adopted, making it easier to access location on different operating systems.
+
+Data Persistence:
+For local data persistence, the sqflite library was used, a plugin that integrates a standalone and highly reliable SQL database engine.
+
+Other Libraries:
+Other libraries, such as image_cropper (providing image cropping support), were also integrated to enhance the user experience and optimize the application's performance.
+
+P.S:
+That's basically it, folks. I hope you like it! Feel free to reach out with any questions. :)
